@@ -4,9 +4,10 @@ const MovieRouter = express.Router();
 const { MovieModel } = require('../models/movie.model');
 
 MovieRouter.post('/', async (req, res) => {
-    const { nameVideo, type, year, season, language, description } = req.body;
+    const { nameVideo, movieImg,type, year, season, language, description } = req.body;
     const new_movie = new MovieModel({
         nameVideo,
+        movieImg,
         type,
         year,
         season,
